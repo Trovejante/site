@@ -3,87 +3,75 @@ import CompatibilityList from "~/components/compatibility-list.astro";
 import ContentSection from "~/components/content-section.astro";
 import type { CompatibilityItem } from "~/types";
 
-const frameworks: Array<CompatibilityItem> = [
+const roles: Array<CompatibilityItem> = [
   {
-    title: "React",
+    title: "Tank",
     icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    url: "#",
   },
   {
-    title: "Preact",
+    title: "Melee DPS",
     icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    url: "#",
   },
   {
-    title: "Svelte",
+    title: "Ranged DPS",
     icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    url: "#",
   },
   {
-    title: "Vue",
+    title: "Healer",
     icon: "frameworks/vue",
-    url: "https://vuejs.org/",
-  },
-  {
-    title: "Solid",
-    icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
-  },
-  {
-    title: "Lit",
-    icon: "frameworks/lit",
-    url: "https://lit.dev/",
+    url: "#",
   },
 ];
 
-const platforms: Array<CompatibilityItem> = [
+const specs: Array<CompatibilityItem> = [
   {
     title: "Netlify",
     icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
+    url: "#",
   },
   {
     title: "Vercel",
     icon: "platforms/vercel",
-    url: "https://vercel.com/",
+    url: "#",
   },
   {
     title: "Cloudflare",
     icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
+    url: "#",
   },
   {
     title: "Render",
     icon: "platforms/render",
-    url: "https://render.com/",
+    url: "#",
   },
   {
     title: "GitHub",
     icon: "fa-brands:github",
-    url: "https://pages.github.com/",
+    url: "#",
   },
   {
     title: "GitLab",
     icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
+    url: "#",
   },
 ];
 ---
 
-<ContentSection title="Compatibility" id="compatibility">
+<ContentSection title="Classic (SoD)" id="compatibility">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-    and deploy to your favorite <span class="text-primary">platform</span>.
+    Grupo em formação para <span class="text-primary">Profundezas Negras</span>.
   </Fragment>
   <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
+    items={roles}
+    title="Roles"
     url="https://docs.astro.build/core-concepts/framework-components/"
   />
   <CompatibilityList
-    items={platforms}
-    title="Platforms"
+    items={specs}
+    title="Specs"
     url="https://docs.astro.build/guides/deploy/"
   />
 </ContentSection>

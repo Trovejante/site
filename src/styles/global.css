@@ -1,4 +1,19 @@
 /* TODO: consider creating <Button> and <GradientText> components */
+.from-purple-dark {
+  --tw-gradient-from: #230d6c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(99 102 241 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-purple-regular {
+  --tw-gradient-to: rgb(217 70 239 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #6d44d2 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-purple-light {
+  --tw-gradient-to: #a07aff var(--tw-gradient-to-position);
+}
+
 a,
 .btn {
   @apply transition-colors duration-200;
@@ -8,5 +23,5 @@ a,
 
 .gradient-text {
   @apply bg-clip-text text-transparent;
-  @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+  @apply bg-gradient-to-br from-purple-dark via-purple-regular to-purple-light;
 }
