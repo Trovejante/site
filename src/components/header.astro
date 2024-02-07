@@ -1,23 +1,30 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import logoImage from "~/assets/logo.png";
 
 const navItems: Array<NavItem> = [
-  { title: "Dragonflight", url: "#features" },
-  { title: "Classic (SoD)", url: "#compatibility" },
-  { title: "Apply", url: "#showcase" },
+  { title: "Dragonflight", url: "#wow-retail" },
+  { title: "Classic (SoD)", url: "#wow-classic" },
+  { title: "Apply", url: "#apply" },
 ];
 ---
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 sm:py-0 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="size-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <Image
+      class="size-20 hidden sm:block"
+      src={logoImage}
+      loading="eager"
+      alt="purple dragon logo"
+      />
+    <span class="text-lg">Trovejante</span>
   </a>
   <div>
     <div class="flex items-center gap-6">
@@ -58,7 +65,12 @@ const navItems: Array<NavItem> = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="size-16" />
+            <Image
+              class="inline size-20"
+              src={logoImage}
+              loading="eager"
+              alt="purple dragon logo"
+              />
           </div>
           <nav>
             <ul class="flex flex-col">

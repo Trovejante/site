@@ -1,29 +1,57 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 import ContentSection from "~/components/content-section.astro";
+import logoImage from "~/assets/logo.png";
 ---
 
 <ContentSection title="Sobre" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="size-32" />
+  <Image
+    slot="eyebrow"
+    class="size-64 hidden sm:block"
+    src={logoImage}
+    loading="eager"
+    alt="purple dragon logo"
+  />
+  
   <Fragment slot="lead">
-    Formado em <span class="text-primary">VotI</span>,
-    somos um grupo formado por pessoas <span class="text-primary">dedicadas</span>
+    Formado em <abbr title="Raid: Câmara dos Encarnados, Dragonflight série 1" class="text-primary">VotI</abbr>,
+    somos um grupo composto por pessoas <span class="text-primary">dedicadas</span>
     e com o mesmo objetivo em mente: <span class="text-primary">evolução</span>.
   </Fragment>
-  <!-- <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon name="mdi:telescope" class="size-8" />
-      <span>Read the docs</span>
-    </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon name="mdi:rocket" class="size-8" />
-      <span>Try it out</span>
-    </a>
-  </div> -->
+
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+      <div class="size-16 rounded-full border-2 border-current p-3">
+        <Icon name="mdi:bullseye-arrow" class="size-full" />
+      </div>
+      <p class="text-center text-offset text-sm">
+        Além do objetivo principal do core: <abbr title="Conquista: Acima do normal" class="text-primary">AOTC</abbr>,
+        realizamos grupos de pedras-chaves <span class="text-primary">míticas</span>
+        para todos aqueles que desejam pegar <abbr title="Conquista: Herói da Pedra-chave" class="text-primary">KSH</abbr>
+        e consequentemente os <span class="text-primary">portais</span> com todas +20 no tempo.
+      </p>
+    </li>
+
+    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+      <div class="size-16 rounded-full border-2 border-current p-3">
+        <Icon name="mdi:robot-happy-outline" class="size-full" />
+      </div>
+      <p class="text-center text-offset text-sm">
+        Nosso foco é um grupo de <span class="text-primary">amigos</span> cada vez maior,
+        em um ambiente <span class="text-primary">descontraído</span> e <span class="text-primary">amigável</span>,
+        prezando sempre melhorarmos e evoluirmos juntos como uma <span class="text-primary">equipe</span>.
+      </p>
+    </li>
+
+    <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+      <div class="size-16 rounded-full border-2 border-current p-3">
+        <Icon name="mdi:crowd" class="size-full" />
+      </div>
+      <p class="text-center text-offset text-sm">
+        Caso você tenha interesse em participar da nossa <span class="text-primary">família</span>,
+        verifique os requisitos necessários e faça o <span class="text-primary">apply</span> no final da página.
+      </p>
+    </li>
+  </ul>
 </ContentSection>
